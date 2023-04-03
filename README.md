@@ -6,13 +6,13 @@ The MIDI module Adds MIDI in and MIDI out to a RC2014 computer (requires enhance
 
 # usage
 
-duplicate this file and name it something appropriate for your project
+duplicate mid-fw.asm and name it something appropriate for your project
 
 edit the introduction: string
 
-make sure MIDI.asm is in the same location as this file and that this file includes MIDI.asm
+make sure that it ncludes MIDI.asm and that MIDI.asm is in the same location.
 
-call init_serial  to set up the buffers and the interrupts.
+call init_serial   sets up the buffers and the interrupts.
 
 to receive MIDI - 
 * call MIDI_task frequenty
@@ -34,7 +34,7 @@ to send MIDI -
   * b = second byte, eg note
   * c = third byte, eg velocity
 * call send_midi_byte
-* can be used to build your own messages, particularly where you need to send a different number of bytes than 3
+  * can be used to build your own messages, particularly where you need to send a different number of bytes than 3
   * byte in e	
 
 * call restore_system  to restore interrupts to cp/m before exit
