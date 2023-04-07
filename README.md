@@ -3,6 +3,11 @@ framework and example programs that work with my MIDI module for RC2014
 
 The MIDI module Adds MIDI in and MIDI out to a RC2014 computer (requires enhanced backplane, SIO/2 module and cp/m.)
 
+# setting up
+
+Important: If you're using the dual clock module, make sure that the jumper for Clock 2 is removed completely, or if you have no Ext clock in place on that board, move the jumper to the 'ext' (rightmost) setting. Also, remove the jumper on the SIO/2 module for Port B Clock.  All of this is necessary so that the MIDI module can clock your Port B at the correct speed via the Clck2 bus line.
+
+If you remove the MIDI module, remember to set the jumpers back to their original setting. I believe the SIO2 needs a clock signal for Port B even if you're not using it. 
 
 # usage
 
