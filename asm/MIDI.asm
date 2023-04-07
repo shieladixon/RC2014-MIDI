@@ -334,12 +334,13 @@ MIDI_task:
 					
 		
 notClock:			
-			; uncomment these 2 lines and implement midi_byte_received in your program to do something with that byte, eg print it
-			;ld(byte_received),a	; store it, we'll need to retrieve this a few times
+			ld(byte_received),a	; store it, we'll need to retrieve this a few times
+			
+			
+			; uncomment this line and implement midi_byte_received in your program to do something with that byte, eg print it
 			;call midi_byte_received
 			
-			
-			
+
 			
 			
 			ld a,(byte_received)
